@@ -21,15 +21,35 @@
 	<link rel="stylesheet" href="css/style.css">
 
 	<style>
+		.logo {
+			filter: invert(100%);
+			transition: filter 0.3s ease;
+		}
+
+		.navbar-brand:hover .logo {
+			filter: invert(0%);
+		}
+
 		@media (max-width: 991.8px) {
 			.tags-align-pc-tel {
-				margin-top: 75px; /* Margem para dispositivos móveis */
+				margin-top: 75px;
+				/* Margem para dispositivos móveis */
+			}
+
+			.logo {
+				filter: invert(0%);
+			}
+
+			.awake .logo {
+				filter: invert(100%);
+				transition: filter 0.3s ease;
 			}
 		}
 
 		@media (min-width: 991.8px) {
 			.tags-align-pc-tel {
-				margin-top: 150px; /* Margem para desktop */
+				margin-top: 150px;
+				/* Margem para desktop */
 			}
 		}
 	</style>
@@ -39,7 +59,9 @@
 
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="index.html">Rosângela Carvalho</a>
+			<a class="navbar-brand" href="index.html">
+				<img src="images/Rosângela Carvalho Logo.svg" alt="" class="logo" style="height: 3rem;">
+			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
 				aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="oi oi-menu"></span> Menu
@@ -51,7 +73,7 @@
 					<!-- <li class="nav-item"><a href="about.html" class="nav-link">Sobre</a></li> -->
 					<!-- <li class="nav-item"><a href="team.html" class="nav-link">Equipe</a></li>
             <li class="nav-item"><a href="services.html" class="nav-link">Serviços</a></li> -->
-            <li class="nav-item"><a href="project.html" class="nav-link">Projetos</a></li>
+					<li class="nav-item"><a href="project.html" class="nav-link">Projetos</a></li>
 					<!-- <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li> -->
 					<li class="nav-item active"><a href="contact.html" class="nav-link">Contato</a></li>
 				</ul>
@@ -84,7 +106,9 @@
 							<div class="icon">
 								<span class="fa fa-map"></span>
 							</div>
-							<p><span>Endereço:</span> <a href="https://maps.app.goo.gl/yRUgUAxZzMVjnVrj8" target="_blank">Rua Antônio Marroquim, 673. Baixão, Arapiraca - Alagoas Brasil</a></p>
+							<p><span>Endereço:</span> <a href="https://maps.app.goo.gl/yRUgUAxZzMVjnVrj8"
+									target="_blank">Rua Antônio Marroquim, 673. Baixão, Arapiraca - Alagoas Brasil</a>
+							</p>
 						</div>
 						<div class="col-md-4 text-center border-height py-4">
 							<div class="icon">
@@ -92,8 +116,9 @@
 							</div>
 							<p><span>Telefone</span> <a href="tel://+5582999852911 /br">(82) 9 9985 2911</a></p>
 							<a href="https://wa.me/5582999852911" target="_blank"><span
-								class="fa fa-whatsapp"></span></a>
-								<p><span>Whatsapp</span> <a href="https://wa.me/5582999852911" target="_blank">(82) 9 9985 2911</a></p>
+									class="fa fa-whatsapp"></span></a>
+							<p><span>Whatsapp</span> <a href="https://wa.me/5582999852911" target="_blank">(82) 9 9985
+									2911</a></p>
 
 						</div>
 						<div class="col-md-4 text-center py-4">

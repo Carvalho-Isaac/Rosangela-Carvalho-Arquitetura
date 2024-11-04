@@ -21,25 +21,47 @@
 	<link rel="stylesheet" href="css/style.css">
 
 	<style>
+		.logo {
+			filter: invert(100%);
+			transition: filter 0.3s ease;
+		}
+
+		.navbar-brand:hover .logo {
+			filter: invert(0%);
+		}
+
 		@media (max-width: 991.8px) {
 			.tags-align-pc-tel {
-				margin-top: 75px; /* Margem para dispositivos móveis */
+				margin-top: 75px;
+				/* Margem para dispositivos móveis */
+			}
+
+			.logo {
+				filter: invert(0%);
+			}
+
+			.awake .logo {
+				filter: invert(100%);
+				transition: filter 0.3s ease;
 			}
 		}
 
 		@media (min-width: 991.8px) {
 			.tags-align-pc-tel {
-				margin-top: 150px; /* Margem para desktop */
+				margin-top: 150px;
+				/* Margem para desktop */
 			}
 		}
-		</style>
+	</style>
 </head>
 
 <body>
 
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="index.html">Rosângela Carvalho</a>
+			<a class="navbar-brand" href="index.html">
+				<img src="images/Rosângela Carvalho Logo.svg" alt="" class="logo" style="height: 3rem;">
+			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
 				aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="oi oi-menu"></span> Menu

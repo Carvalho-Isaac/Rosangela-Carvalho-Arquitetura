@@ -19,13 +19,38 @@
 
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/style.css">
+
+	<style>
+		.logo{
+			filter: invert(100%);
+			transition: filter 0.3s ease;
+		}
+		.navbar-brand:hover .logo {
+			filter: invert(0%);
+		}
+
+		@media (max-width: 991.8px) {
+			.logo {
+				filter: invert(0%);
+			}
+
+			.awake .logo{
+				filter: invert(100%);
+				transition: filter 0.3s ease;
+			}
+
+
+		}
+	</style>
 </head>
 
 <body>
 
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="index.html">Rosângela Carvalho</a>
+			<a class="navbar-brand" href="index.html">
+				<img src="images/Rosângela Carvalho Logo.svg" alt="" class="logo" style="height: 3rem;">
+			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
 				aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="oi oi-menu"></span> Menu
@@ -57,8 +82,8 @@
 						<p style="font-size: 18px;">Paixão pela transformação.</p>
 						<div class="d-flex meta">
 							<div class="">
-								<p class="mb-0"><a href="project.html"
-										class="btn btn-primary py-3 px-2 px-md-4">Explore Projetos</a></p>
+								<p class="mb-0"><a href="project.html" class="btn btn-primary py-3 px-2 px-md-4">Explore
+										Projetos</a></p>
 							</div>
 							<a href="https://www.youtube.com/@projetosrosangela" target="_blank"
 								class="d-flex align-items-center button-link">
@@ -194,7 +219,8 @@
 				<div class="col-md-4 col-lg-4 justify-content-center counter-wrap ftco-animate">
 					<div class="block-18 py-md-5 mb-md-4">
 						<div class="text text-border d-flex align-items-center">
-							<strong class="number" data-number="600">0</strong><strong style="font-weight: 600; font-size: 50px; color: #96bb7c;">+</strong>
+							<strong class="number" data-number="600">0</strong><strong
+								style="font-weight: 600; font-size: 50px; color: #96bb7c;">+</strong>
 							<span>Projetos <br>Concluídos</span>
 						</div>
 					</div>
@@ -202,7 +228,8 @@
 				<div class="col-md-4 col-lg-4 justify-content-center counter-wrap ftco-animate">
 					<div class="block-18 py-md-5 mb-md-4">
 						<div class="text d-flex align-items-center">
-							<strong class="number" data-number="30">0</strong><strong style="font-weight: 600; font-size: 50px; color: #96bb7c;">+</strong>
+							<strong class="number" data-number="30">0</strong><strong
+								style="font-weight: 600; font-size: 50px; color: #96bb7c;">+</strong>
 							<span>Parceiros e <br>Fornecedores</span>
 						</div>
 					</div>
@@ -267,7 +294,8 @@
 									<span class="fa fa-quote-left"></span>
 
 									<div class="d-flex align-items-center">
-										<div class="user-img" style="background-image: url(images/Parceiros/eugenio\ vidros.jpg)"></div>
+										<div class="user-img"
+											style="background-image: url(images/Parceiros/eugenio\ vidros.jpg)"></div>
 										<div class="pl-3">
 											<p class="name">Eugenio</p>
 											<span class="position">Eugenio Vidros</span>
@@ -299,7 +327,8 @@
 								<div class="text">
 									<span class="fa fa-quote-left"></span>
 									<div class="d-flex align-items-center">
-										<div class="user-img" style="background-image: url(images/Parceiros/fds.jpeg)"></div>
+										<div class="user-img" style="background-image: url(images/Parceiros/fds.jpeg)">
+										</div>
 										<div class="pl-3">
 											<p class="name">Daniel Rocha</p>
 											<span class="position">FDS Tech</span>
