@@ -2,7 +2,8 @@
 // -9.747513247689607, -36.671967406867715
 
 function initMap() {
-    var myLatlng = new google.maps.LatLng(-9.747513247689607, -36.671967406867715);
+    // Define a posição inicial do mapa
+    var myLatlng = new google.maps.LatLng(-9.747451834463789, -36.67209109815257);
 
     var mapOptions = {
         zoom: 15,
