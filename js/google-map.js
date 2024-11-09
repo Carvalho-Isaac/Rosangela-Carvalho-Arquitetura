@@ -1,61 +1,126 @@
-var google;
+// KEY = AIzaSyBDVUAt0I4FrAkr2ao8p42kdf-ui3A9lKo
+// -9.747451834463789, -36.67209109815257
 
-function init() {
-    // Basic options for a simple Google Map
-    // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-    // var myLatlng = new google.maps.LatLng(40.71751, -73.990922);
-    var myLatlng = new google.maps.LatLng(-9.747402241339776, -36.67195498763871);
-    // 39.399872
-    // -8.224454
+// var google;
+
+// function init() {
+//     // Basic options for a simple Google Map
+//     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+//     // var myLatlng = new google.maps.LatLng(40.71751, -73.990922);
+//     var myLatlng = new google.maps.LatLng(-9.747402241339776, -36.67195498763871);
+//     // 39.399872
+//     // -8.224454 
     
+//     var mapOptions = {
+//         // How zoomed in you want the map to start at (always required)
+//         zoom: 7,
+
+//         // The latitude and longitude to center the map (always required)
+//         center: myLatlng,
+
+//         // How you would like to style the map. 
+//         scrollwheel: false,
+//         styles: [
+//             {
+//                 "featureType": "administrative.country",
+//                 "elementType": "geometry",
+//                 "stylers": [
+//                     {
+//                         "visibility": "simplified"
+//                     },
+//                     {
+//                         "hue": "#ff0000"
+//                     }
+//                 ]
+//             }
+//         ]
+//     };
+
+    
+
+//     // Get the HTML DOM element that will contain your map 
+//     // We are using a div with id="map" seen below in the <body>
+//     var mapElement = document.getElementById('map');
+
+//     // Create the Google Map using out element and options defined above
+//     var map = new google.maps.Map(mapElement, mapOptions);
+    
+//     var addresses = ['Rua Antonio Marroquin, 673, Arapiraca, Alagoas, Brazil'];
+
+//     for (var x = 0; x < addresses.length; x++) {
+//         $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+addresses[x]+'&sensor=false', null, function (data) {
+//             var p = data.results[0].geometry.location
+//             var latlng = new google.maps.LatLng(p.lat, p.lng);
+//             new google.maps.Marker({
+//                 position: latlng,
+//                 map: map,
+//                 icon: 'images/loc.png'
+//             });
+
+//         });
+//     }
+    
+// }
+// google.maps.event.addDomListener(window, 'load', init);
+
+// -----------
+
+function initMap() {
+    // Define a posição inicial do mapa
+    var myLatlng = new google.maps.LatLng(-9.747451834463789, -36.67209109815257);
+
     var mapOptions = {
-        // How zoomed in you want the map to start at (always required)
-        zoom: 7,
-
-        // The latitude and longitude to center the map (always required)
+        zoom: 15,  // Ajuste o zoom para um valor maior
         center: myLatlng,
-
-        // How you would like to style the map. 
         scrollwheel: false,
         styles: [
             {
                 "featureType": "administrative.country",
                 "elementType": "geometry",
                 "stylers": [
-                    {
-                        "visibility": "simplified"
-                    },
-                    {
-                        "hue": "#ff0000"
-                    }
+                    { "visibility": "simplified" },
+                    { "hue": "#ff0000" }
                 ]
             }
         ]
     };
 
-    
-
-    // Get the HTML DOM element that will contain your map 
-    // We are using a div with id="map" seen below in the <body>
+    // Inicializa o mapa no elemento com id "map"
     var mapElement = document.getElementById('map');
-
-    // Create the Google Map using out element and options defined above
     var map = new google.maps.Map(mapElement, mapOptions);
-    
-    var addresses = ['New York'];
 
-    for (var x = 0; x < addresses.length; x++) {
-        $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+addresses[x]+'&sensor=false', null, function (data) {
-            var p = data.results[0].geometry.location
-            var latlng = new google.maps.LatLng(p.lat, p.lng);
-            new google.maps.Marker({
-                position: latlng,
-                map: map,
-                icon: 'images/loc.png'
-            });
+    // Lista de endereços para adicionar marcadores
+    var addresses = ['Rua Antonio Marroquin, 673, Arapiraca, Alagoas, Brasil'];
 
-        });
-    }
-    
+    // Para cada endereço, obtemos as coordenadas e adicionamos um marcador
+    addresses.forEach(function(address) {
+        fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=AIzaSyBDVUAt0I4FrAkr2ao8p42kdf-ui3A9lKo`)
+            .then(response => response.json())
+            .then(data => {
+                // Verifique se a resposta contém resultados válidos
+                if (data.status === "OK" && data.results.length > 0) {
+                    var p = data.results[0].geometry.location;
+                    var latlng = new google.maps.LatLng(p.lat, p.lng);
+
+                    // Usando o marcador tradicional
+                    new google.maps.Marker({
+                        position: latlng,
+                        map: map,
+                        icon: 'images/loc.png'  // Caminho para o ícone do marcador
+                    });
+                } else {
+                    console.error("Geocodificação falhou para o endereço:", address, "Status:", data.status);
+                }
+            })
+            .catch(error => console.error("Erro na solicitação de geocodificação:", error));
+    });
 }
-google.maps.event.addDomListener(window, 'load', init);
+
+// Carrega o Google Maps com a função de callback initMap
+window.onload = function() {
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyBDVUAt0I4FrAkr2ao8p42kdf-ui3A9lKo&callback=initMap`;
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
+};
