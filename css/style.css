@@ -70,7 +70,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #f0f0f0;
+  background-color: #fff;
 }
 
 .logo {
@@ -11745,7 +11745,7 @@ html {
 
 body {
   font-family: "Nunito Sans", Arial, sans-serif;
-  background:  #f0f0f0;
+  background:  #fff;
   font-size: 16px;
   line-height: 1.8;
   font-weight: 400;
