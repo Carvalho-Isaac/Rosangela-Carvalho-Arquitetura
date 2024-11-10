@@ -30,14 +30,12 @@
 		rel="stylesheet">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
 	<link rel="stylesheet" href="css/animate.css">
-
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="css/magnific-popup.css">
-
 	<link rel="stylesheet" href="css/flaticon.css">
+
 	<link rel="stylesheet" href="css/style.min.css">
 
 </head>
@@ -103,7 +101,6 @@
 									class="fa fa-whatsapp"></span></a>
 							<p><span>Whatsapp</span> <a href="https://wa.me/5582999852911" target="_blank">(82) 9 9985
 									2911</a></p>
-
 						</div>
 						<div class="col-md-4 text-center py-4">
 							<div class="icon">
@@ -174,7 +171,6 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12 text-center">
-
 					<p style="color: #fff;">
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						Copyright &copy;
@@ -188,15 +184,12 @@
 		</div>
 	</footer>
 
-
-
 	<!-- loader -->
 	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
 			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
 			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
 				stroke="#F96D00" />
 		</svg></div>
-
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -211,32 +204,32 @@
 	<script src="js/scrollax.min.js" defer></script>
 
 	<script defer>
-        function loadMapAPI() {
-            const script = document.createElement("script");
-            // Incluindo o 'libraries=marker' e o 'mapId' na URL
-            script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBDVUAt0I4FrAkr2ao8p42kdf-ui3A9lKo&loading=async&libraries=marker&callback=initMap";
-            script.async = true;
-            script.defer = true;
-            document.head.appendChild(script);
-        }
+		function loadMapAPI() {
+			const script = document.createElement("script");
+			// Incluindo o 'libraries=marker' e o 'mapId' na URL
+			script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBDVUAt0I4FrAkr2ao8p42kdf-ui3A9lKo&loading=async&libraries=marker&callback=initMap";
+			script.async = true;
+			script.defer = true;
+			document.head.appendChild(script);
+		}
 
-        function initMap() {
-            const map = new google.maps.Map(document.getElementById("map"), {
-                center: { lat: -9.747371542852102, lng: -36.67216227790985 },
-                zoom: 15,
-                mapId: "YOUR_MAP_ID", // Substitua com o ID do mapa gerado
-            });
+		function initMap() {
+			const map = new google.maps.Map(document.getElementById("map"), {
+				center: { lat: -9.747371542852102, lng: -36.67216227790985 },
+				zoom: 16,
+				mapId: "YOUR_MAP_ID", // Substitua com o ID do mapa gerado
+			});
 
-            // Usando AdvancedMarkerElement
-            const marker = new google.maps.marker.AdvancedMarkerElement({
-                position: { lat: -9.747371542852102, lng: -36.67216227790985 },
-                map: map,
-                title: "R. Antônio Marroquim, 673",
-            });
-        }
+			// Usando AdvancedMarkerElement
+			const marker = new google.maps.marker.AdvancedMarkerElement({
+				position: { lat: -9.747371542852102, lng: -36.67216227790985 },
+				map: map,
+				title: "R. Antônio Marroquim, 673",
+			});
+		}
 
-        window.onload = loadMapAPI;
-    </script>
+		window.onload = loadMapAPI;
+	</script>
 
 	<script src="js/main.js" defer></script>
 
