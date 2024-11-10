@@ -175,7 +175,8 @@
 			<div class="row">
 				<div class="col-md-12 text-center">
 
-					<p style="color: #fff;"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					<p style="color: #fff;">
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						Copyright &copy;
 						<script>document.write(new Date().getFullYear());</script> All rights reserved | This template
 						is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a
@@ -197,20 +198,43 @@
 		</svg></div>
 
 
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery-migrate-3.0.1.min.js"></script>
-		<script src="js/popper.min.js" defer></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/jquery.easing.1.3.js" defer></script>
-		<script src="js/jquery.waypoints.min.js" defer></script>
-		<script src="js/jquery.stellar.min.js" defer></script>
-		<script src="js/owl.carousel.min.js" defer></script>
-		<script src="js/jquery.magnific-popup.min.js" defer></script>
-		<script src="js/jquery.animateNumber.min.js" defer></script>
-		<script src="js/scrollax.min.js" defer></script>
-	<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-	<script src="js/google-map.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js" defer></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js" defer></script>
+	<script src="js/jquery.waypoints.min.js" defer></script>
+	<script src="js/jquery.stellar.min.js" defer></script>
+	<script src="js/owl.carousel.min.js" defer></script>
+	<script src="js/jquery.magnific-popup.min.js" defer></script>
+	<script src="js/jquery.animateNumber.min.js" defer></script>
+	<script src="js/scrollax.min.js" defer></script>
+    <script defer>
+        function loadMapAPI() {
+            const script = document.createElement("script");
+            script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBDVUAt0I4FrAkr2ao8p42kdf-ui3A9lKo&loading=async&callback=initMap";
+            script.async = true;
+            script.defer = true;
+            document.head.appendChild(script);
+        }
+
+        function initMap() {
+            // Inicialização do mapa
+            const map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: -9.747371542852102, lng: -36.67216227790985 },
+                zoom: 15,
+            });
+
+            const marker = new google.maps.Marker({
+                position: { lat: -9.747371542852102, lng: -36.67216227790985 },
+                map: map,
+                title: "R. Antônio Marroquim, 673",
+            });
+        }
+
+        window.onload = loadMapAPI;
+    </script>
+
 	<script src="js/main.js" defer></script>
 
 </body>
