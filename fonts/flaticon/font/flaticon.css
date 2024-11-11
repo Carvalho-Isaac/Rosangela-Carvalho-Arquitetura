@@ -42,3 +42,16 @@ margin-left: 20px;
 .flaticon-debate:before { content: "\f109"; }
 .flaticon-wall:before { content: "\f10a"; }
 .flaticon-hotel:before { content: "\f10b"; }
+
+/* Para todos os ícones do Flaticon */
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before {
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #000000;  /* Cor padrão para os ícones */
+}
