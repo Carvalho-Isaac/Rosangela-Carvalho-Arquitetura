@@ -8127,6 +8127,7 @@ button.bg-dark:focus {
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
+  justify-content: center;
 }
 
 .align-items-baseline {
@@ -12633,13 +12634,13 @@ h5,
 
 .services.services-bg .media-body {
   width: 100%;
-  color: #000000CC;
+  color: #343a40;
 }
 
 .services.services-bg .media-body h3 {
   font-size: 20px;
   font-weight: 600;
-  color: #000000CC;
+  color: #343a40;
 }
 
 .services.services-bg .media-body p {
@@ -13622,7 +13623,8 @@ textarea.form-control {
 .ftco-counter .text strong.number {
   font-weight: 600;
   font-size: 50px;
-  color: #96bb7c;
+  /* color: #96bb7c; */
+  color: #343a40;
 }
 
 .ftco-counter .text span {

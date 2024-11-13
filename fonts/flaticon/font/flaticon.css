@@ -53,5 +53,5 @@ margin-left: 20px;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #000000;  /* Cor padrão para os ícones */
+  color:#343a40;  /* Cor padrão para os ícones */
 }
