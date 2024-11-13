@@ -12446,7 +12446,6 @@ h5,
 .btn.btn-primary:hover {
   border: 1px solid #96bb7c;
   background: transparent;
-  color: #96bb7c;
 }
 
 .btn.btn-primary.btn-outline-primary {
@@ -12634,7 +12633,7 @@ h5,
 
 .services.services-bg .media-body {
   width: 100%;
-  /* color: rgba(255, 255, 255, 0.8); */
+  color: #000000CC;
 }
 
 .services.services-bg .media-body h3 {
