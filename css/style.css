@@ -12142,6 +12142,10 @@ h5,
   color: #000000CC;
 }
 
+.slider-text .button-link .button-video:hover span {
+  color: #f0f0f0;
+}
+
 .slider-text .button-link span {
   color: #000000;
 }
@@ -13630,7 +13634,7 @@ textarea.form-control {
 .ftco-counter .text span {
   display: block;
   font-size: 14px;
-  color: rgba(0, 0, 0, 0.4);
+  color: #343a40;
   margin-bottom: 10px;
   line-height: 1.4;
   padding-left: 15px;
