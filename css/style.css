@@ -12142,6 +12142,10 @@ h5,
   color: #000000CC;
 }
 
+.slider-text .button-link .button-video:hover span {
+  color: #f0f0f0;
+}
+
 .slider-text .button-link span {
   color: #000000;
 }
