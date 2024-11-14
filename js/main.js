@@ -247,11 +247,11 @@
 
 // Webfont loader 
 
-WebFont.load({
-	google: {
-		families: ['Nunito Sans:400,600,700,900']
-	},
-	fontactive: function () {
-		document.documentElement.classList.add('fonts-loaded');
-	}
-});
+// WebFont.load({
+// 	google: {
+// 		families: ['Nunito Sans:400,600,700,900']
+// 	},
+// 	fontactive: function () {
+// 		document.documentElement.classList.add('fonts-loaded');
+// 	}
+// });
