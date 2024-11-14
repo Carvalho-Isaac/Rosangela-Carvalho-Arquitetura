@@ -25,6 +25,8 @@
 
 	<link rel="shortcut icon" type="image/x-icon" href="images/LOGO.ico">
 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap"
 		rel="stylesheet">
 
@@ -62,8 +64,8 @@
 	</nav>
 	<!-- END nav -->
 
-	<section class="hero-wrap" style="background-image: url('images/Rosangela-wide2.webp');"
-		data-stellar-background-ratio="0.3" loading="lazy">
+	<section class="hero-wrap js-lazy-background" data-bg="images/Rosangela-wide2.webp"
+		data-stellar-background-ratio="0.3">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row no-gutters slider-text align-items-center">
@@ -140,8 +142,8 @@
 				</div>
 				<div class="col-md-3 d-flex align-items-stretch ftco-animate">
 					<div class="media block-6 services services-bg services-darken d-block text-center px-2 py-5">
-						<div class="icon d-flex justify-content-center align-items-center"><span
-								class="flaticon-house" aria-label="Ícone de Casa"></span></div>
+						<div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-house"
+								aria-label="Ícone de Casa"></span></div>
 						<div class="media-body py-md-4">
 							<h3>Projetos Urbanísticos</h3>
 							<p>Compreendemos o pulso das cidades modernas. Nossos projetos urbanísticos não apenas
@@ -152,8 +154,8 @@
 				</div>
 				<div class="col-md-3 d-flex align-items-stretch ftco-animate">
 					<div class="media block-6 services services-bg  d-block text-center px-2 py-5">
-						<div class="icon d-flex justify-content-center align-items-center"><span
-								class="flaticon-relax" aria-label="Ícone de Interior"></span></div>
+						<div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-relax"
+								aria-label="Ícone de Interior"></span></div>
 						<div class="media-body py-md-4">
 							<h3>Interiores</h3>
 							<p>Seja em casa ou no escritório, o design de interiores é crucial para criar ambientes
@@ -227,7 +229,7 @@
 		</div>
 	</section>
 
-	
+
 
 	<section class="ftco-section ftco-portfolio">
 		<div class="row justify-content-center no-gutters">
@@ -240,7 +242,7 @@
 			<div class="row no-gutters">
 				<div class="col-md-12 portfolio-wrap">
 					<div class="row no-gutters align-items-center">
-						<div class="col-md-6 img js-fullheight" style="background-image: url(images/Projetos-1.webp);" loading="lazy">
+						<div class="col-md-6 img js-fullheight js-lazy-background" data-bg="images/Projetos-1.webp">
 						</div>
 						<div class="col-md-6">
 							<div class="text pt-5 pl-0 pl-lg-5 pl-md-4 ftco-animate">
@@ -281,8 +283,8 @@
 								<div class="text">
 									<span class="fa fa-quote-left"></span>
 									<div class="d-flex align-items-center">
-										<div class="user-img"
-											style="background-image: url(images/Parceiros/eugenio-vidros.webp)"></div>
+										<div class="user-img js-lazy-background"
+											data-bg="images/Parceiros/eugenio-vidros.webp"></div>
 										<div class="pl-3">
 											<p class="name">Eugenio</p>
 											<span class="position">Eugenio Vidros</span>
@@ -298,7 +300,7 @@
 								<div class="text">
 									<span class="fa fa-quote-left"></span>
 									<div class="d-flex align-items-center">
-										<div class="user-img" style="background-image: url()"></div>
+										<div class="user-img js-lazy-background" data-bg=""></div>
 										<div class="pl-3">
 											<p class="name">Pedro Romualdo</p>
 											<span class="position">Parque das Águas Incorporadora</span>
@@ -314,7 +316,7 @@
 								<div class="text">
 									<span class="fa fa-quote-left"></span>
 									<div class="d-flex align-items-center">
-										<div class="user-img" style="background-image: url(images/Parceiros/fds.webp)">
+										<div class="user-img js-lazy-background" data-bg="images/Parceiros/fds.webp">
 										</div>
 										<div class="pl-3">
 											<p class="name">Daniel Rocha</p>
@@ -387,7 +389,8 @@
 						Copyright &copy;
 						<script>document.write(new Date().getFullYear());</script> All rights reserved | This template
 						is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a
-							href="https://colorlib.com" target="_blank" style="text-decoration: underline; color: #fff;">Colorlib</a>
+							href="https://colorlib.com" target="_blank"
+							style="text-decoration: underline; color: #fff;">Colorlib</a>
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 					</p>
 				</div>
@@ -402,6 +405,7 @@
 				stroke="#F96D00" />
 		</svg></div>
 
+	<script src="js/IntersectionObserver.js"></script>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery-migrate-3.0.1.min.js"></script>
 
