@@ -12051,7 +12051,8 @@ h5,
   font-size: 20px;
 }
 
-.navbar-brand img{
+.navbar-brand img, 
+.ftco-footer .ftco-footer-widget h2 img{
   height: 46px; 
   width: 179.77px;
 }
