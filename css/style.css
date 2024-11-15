@@ -82,6 +82,11 @@ body {
   filter: invert(0%);
 }
 
+.svg-ico{
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 992px) {
   .tags-align-pc-tel {
     margin-top: 75px;
@@ -12138,12 +12143,12 @@ h5,
   margin-left: 20px;
 }
 
-.slider-text .button-link .button-video span {
-  color: #000000CC;
+.slider-text .button-link .button-video svg {
+  fill: #000000CC;
 }
 
-.slider-text .button-link .button-video:hover span {
-  color: #f0f0f0;
+.slider-text .button-link .button-video:hover svg {
+  fill: #f0f0f0;
 }
 
 .slider-text .button-link span {
@@ -12168,9 +12173,12 @@ h5,
   color: rgba(0, 0, 0, 0.7);
 }
 
-.slider-text .breadcrumbs span i {
-  color: #96bb7c;
+.slider-text .breadcrumbs span a .svg-ico-arrow-start,
+.slider-text .breadcrumbs span .svg-ico-arrow-start {
+  fill: #96bb7c;
+  height: 20px;
   font-size: 13px;
+  padding-bottom: 5px;
 }
 
 .slider-text .breadcrumbs span a {
@@ -12861,11 +12869,14 @@ textarea.form-control {
 
 .ftco-footer .ftco-footer-widget ul li a {
   color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
 }
 
-.ftco-footer .ftco-footer-widget ul li a span {
-  color: rgba(255, 255, 255, 0.5);
+.ftco-footer .ftco-footer-widget ul li a .svg-ico-social {
+  width: 15px;
+  fill: rgba(255, 255, 255, 0.5);
   font-size: 14px;
+  margin-right: 10px;
 }
 
 .ftco-footer .ftco-footer-widget .btn-primary {
@@ -12876,6 +12887,13 @@ textarea.form-control {
 .ftco-footer .ftco-footer-widget .btn-primary:hover {
   background:  #f0f0f0;
   border: 2px solid  #f0f0f0 !important;
+}
+
+.ftco-footer .ftco-footer-widget ul li a .svg-ico-arrow {
+  width: 10px;
+  fill: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  margin-right: 5px;
 }
 
 .ftco-footer p {
@@ -12905,7 +12923,7 @@ textarea.form-control {
   position: relative;
 }
 
-.ftco-footer-social li a span {
+.ftco-footer-social li a svg {
   position: absolute;
   font-size: 20px;
   top: 50%;
@@ -13265,9 +13283,9 @@ textarea.form-control {
   color: #000000;
 }
 
-.block-7 .pricing-text li span.fa {
+/* .block-7 .pricing-text li span.fa {
   color: #96bb7c;
-}
+} */
 
 .block-7 .btn-primary {
   color: #f0f0f0;
@@ -13407,12 +13425,13 @@ textarea.form-control {
   border-radius: 50%;
 }
 
-.testimony-wrap .fa {
-  color: #96bb7c;
+.testimony-wrap svg {
+  fill: #96bb7c;
   font-size: 30px;
   position: absolute;
   top: -15px;
-  left: 20px;
+  left: 15px;
+  height: 30px;
 }
 
 .testimony-wrap .name {
@@ -13801,9 +13820,9 @@ textarea.form-control {
   color: #000000;
 }
 
-.contact-section .contact-info .icon span {
-  font-size: 20px;
-  color: #96bb7c;
+.contact-section .contact-info .icon svg {
+  width: 20px;
+  fill: #96bb7c;
 }
 
 @media (min-width: 992px) {
@@ -14253,6 +14272,8 @@ textarea.form-control {
   animation: loader-dash 1.5s ease-in-out infinite;
   stroke-linecap: round;
 }
+
+
 
 @-webkit-keyframes loader-rotate {
   100% {
