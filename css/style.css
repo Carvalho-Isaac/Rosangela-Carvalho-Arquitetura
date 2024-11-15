@@ -12048,8 +12048,12 @@ h5,
 }
 
 .navbar-brand {
-  font-weight: 900;
   font-size: 20px;
+}
+
+.navbar-brand img{
+  height: 46px; 
+  width: 179.77px;
 }
 
 .hero-wrap {
