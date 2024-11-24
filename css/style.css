@@ -12057,6 +12057,33 @@ h5,
   width: 179.77px;
 }
 
+.flatcon{
+  height: 78px;
+  width: 61px;
+
+  background-size: 60px;
+  stroke: #000000CC;
+  stroke-width: 1.8;
+}
+
+.flatcon-arch-proj{
+  background: url("../images/arch-proj.svg") no-repeat;
+}
+
+.flatcon-urb-proj{
+  background: url("../images/urb-proj.svg") no-repeat;
+}
+
+.flatcon-interior{
+  background: url("../images/interior.svg") no-repeat;
+}
+
+.flatcon-consult{
+  background: url("../images/deal.svg") no-repeat;
+}
+
+
+
 .hero-wrap {
   width: 100%;
   height: 850px;
