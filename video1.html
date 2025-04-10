@@ -35,7 +35,6 @@
             object-fit: contain;
         }
 
-        /* Quando o dispositivo estiver em modo retrato, girar o vídeo */
         @media (orientation: portrait) {
             video {
                 transform: rotate(90deg);
@@ -49,8 +48,34 @@
 
 <body>
     <div class="container">
-        <video src="images/Casa Vista Bonita.mp4" type="video/mp4" autoplay="true" loop controls playsinline></video>
+        <video id="video" autoplay muted loop playsinline controls>
+            <source src="images/Casa Vista Bonita.mp4" type="video/mp4" />
+        </video>
     </div>
+
+    <script>
+        const video = document.getElementById('video');
+
+        // Quando o vídeo começar a tocar, iniciar fade-in de volume
+        video.addEventListener('play', () => {
+            video.muted = false;
+            video.volume = 0.0;
+
+            let targetVolume = 1.0;
+            let duration = 3000; // 3 segundos
+            let stepTime = 100;
+            let steps = duration / stepTime;
+            let volumeStep = targetVolume / steps;
+
+            let interval = setInterval(() => {
+                if (video.volume < targetVolume) {
+                    video.volume = Math.min(video.volume + volumeStep, targetVolume);
+                } else {
+                    clearInterval(interval);
+                }
+            }, stepTime);
+        });
+    </script>
 </body>
 
 </html>
