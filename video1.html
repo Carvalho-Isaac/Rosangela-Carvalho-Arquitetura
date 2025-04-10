@@ -43,21 +43,36 @@
                 height: 100vw;
             }
         }
+
+        .sound-button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            z-index: 10;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
         <video id="video" autoplay muted loop playsinline controls>
-            <source src="images/Casa Vista Bonita.mp4" type="video/mp4" />
+            <source src="images/Casa Vista Bonita.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos HTML5.
         </video>
+        <button id="soundBtn" class="sound-button">Ativar som</button>
     </div>
 
     <script>
         const video = document.getElementById('video');
+        const btn = document.getElementById('soundBtn');
 
-        // Quando o vídeo começar a tocar, iniciar fade-in de volume
-        video.addEventListener('play', () => {
+        btn.addEventListener('click', () => {
             video.muted = false;
             video.volume = 0.0;
 
@@ -74,6 +89,8 @@
                     clearInterval(interval);
                 }
             }, stepTime);
+
+            btn.style.display = 'none'; // Esconde botão após ativar som
         });
     </script>
 </body>
